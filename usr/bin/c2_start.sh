@@ -1,5 +1,8 @@
 #!/bin/bash
 HOSTNAME=YOUR.URL.HERE
+DBASE=c2
+LPORT=8080
+SSHPORT=2022
 
 # Root Priv Check
 if [ "$(whoami)" != "root" ]; then
@@ -9,9 +12,9 @@ if [ "$(whoami)" != "root" ]; then
 
 #Ensure no existing c2 instances are running
 
-killall c2_community-linux-64
+killall c2_community-linux-arm7
 
 #Start Hak5 C2 Community Edition
 
 cd /c2/
-./c2_community-linux-64  -https -hostname $HOSTNAME
+./c2_community-linux-arm7 -db $DBASE -https -hostname $HOSTNAME -listenport $LPORT -sshport $SSHPORT
