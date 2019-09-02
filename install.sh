@@ -7,7 +7,6 @@ if [ "$(whoami)" != "root" ]; then
                 fi
                 
 # Download and install
-apt-get update && apt-get install wget git unzip
 mkdir /c2 && cd /c2
 wget https://c2.hak5.org/download/community && mv commmunity c2_community.zip
 unzip c2_community
