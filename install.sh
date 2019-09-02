@@ -8,7 +8,8 @@ if [ "$(whoami)" != "root" ]; then
                 
 # Download and install
 wget https://c2.hak5.org/download/community && mv community c2_community.zip
-unzip c2_community.zip
+mkdir /c2
+unzip c2_community.zip -d /c2
 rm c2_community.zip
 
 # Copy files to their needed locations
