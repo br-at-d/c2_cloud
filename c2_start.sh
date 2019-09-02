@@ -12,9 +12,9 @@ if [ "$(whoami)" != "root" ]; then
 
 #Ensure no existing c2 instances are running
 
-killall c2_community-linux-arm7
+killall c2_community-linux-armv7
 
 #Start Hak5 C2 Community Edition
 
 cd /c2/
-./c2_community-linux-arm7 -db $DBASE -https -hostname $HOSTNAME -listenport $LPORT -sshport $SSHPORT
+./c2_community-linux-armv7 -db $DBASE -https -hostname $HOSTNAME -listenport $LPORT -sshport $SSHPORT
