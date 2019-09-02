@@ -33,5 +33,5 @@ echo "What is your ssh port? (enter "2022" for the default)?"
 read SSHPORT
 sed -i "s/YOUR.SSHPORT.NUMBER/${SSHPORT}/g" /usr/bin/c2_start.sh
 
-Echo "All set, run the c2_start.sh to get the initial setup token. Going forward you can use the "service hak5c2 start|stop|status" commands.
+Echo "All set, run the c2_start.sh to get the initial setup token. Going forward you can use the service hak5c2 start|stop|status" commands.
 
