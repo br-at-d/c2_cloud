@@ -8,7 +8,7 @@ if [ "$(whoami)" != "root" ]; then
                 
 # Download and install
 mkdir /c2 && cd /c2
-wget https://c2.hak5.org/download/community && mv commmunity c2_community.zip
+wget https://c2.hak5.org/download/community && mv community c2_community.zip
 unzip c2_community
 chown -R root c2_cloud
 
