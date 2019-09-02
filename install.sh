@@ -7,10 +7,9 @@ if [ "$(whoami)" != "root" ]; then
                 fi
                 
 # Download and install
-mkdir /c2 && cd /c2
 wget https://c2.hak5.org/download/community && mv community c2_community.zip
-unzip c2_community
-chown -R root c2_cloud
+unzip c2_community.zip
+rm c2_community.zip
 
 # Copy files to their needed locations
 cp c2_start.sh /usr/bin/c2_start.sh
