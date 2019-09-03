@@ -22,18 +22,36 @@ systemctl enable hak5c2.service
 # Set the variable values for the c2 server
 echo "What is your site's URL (without http(s)://)?"
 read HOSTNAME
+if [ -z "$HOSTNAME" ]
+then
+        echo "You must enter a FQDN"
+        read HOSTNAME
+fi
 sed -i "s/YOUR.URL.HERE/${HOSTNAME}/g" /usr/bin/c2_start.sh
 
-echo "What is your database name? (enter "c2" for the default)?"
+echo "What is your database name? (Press enter for the default "c2")?"
 read DBASE
+if [ -z "$DBASE" ]
+then
+        DBASE=c2
+fi
 sed -i "s/YOUR.DB.NAME/${DBASE}/g" /usr/bin/c2_start.sh
 
-echo "What is your listening port? (enter "8080" for the default)?"
+echo "What is your listening port? (Press enter for the default "8080")?"
 read LPORT
+if [ -z "$LPORT" ]
+then
+        LPORT=8080
+fi
 sed -i "s/YOUR.LPORT.NUMBER/${LPORT}/g" /usr/bin/c2_start.sh
 
-echo "What is your ssh port? (enter "2022" for the default)?"
+echo "What is your ssh port? (Press enter for the default "2022")?"
 read SSHPORT
+read SSHPORT
+if [ -z "$SSHPORT" ]
+then
+        SSHPORT=2022
+fi
 sed -i "s/YOUR.SSHPORT.NUMBER/${SSHPORT}/g" /usr/bin/c2_start.sh
 
 chmod +x /usr/bin/c2_start.sh
