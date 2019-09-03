@@ -1,8 +1,10 @@
 # c2_cloud
 
-Forked from https://github.com/GoVanguard/c2_cloud and modified to run on a RaspberryPi 3 running most raspbian versions and dietpi. Added functionality to customize most of the Hak5 C2 running variables. 
+Forked from https://github.com/GoVanguard/c2_cloud 
 
-Tweaks for Hak5 C2 Command and Control
+This will download and configure the Hak5 C2 Cloud Community edition server for most Linux systems with TLS enabled via Let’s Encrypt. 
+The install script allows for the customization all the C2 settings, as well as accepting the defaults.
 
-Automate setup and create launch daemon for Debian based x64 Linux for managing Hak5 C2 Cloud Community edition.
-https://forums.hak5.org/forum/96-hak5-cloud-c%C2%B2/
+Currently the setup process is configured to run the C2 server on a Raspberry Pi 3 (c2_community-linux-armv7), however this can easily be changed by editing c2_start.sh to use the C2 server version of your choice.
+
+Setup has been tested on a Raspberry Pi 3 Model B+ running DietPi v6.25.3 (https://dietpi.com)
